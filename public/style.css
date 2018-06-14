@@ -1695,7 +1695,7 @@ Version:	1.0
 	top: 0;
 	left: 0;
 	width: 50%;
-	background-image: url(images/service-bg.jpg);
+	background-image: url(images/bg_ankatso.jpg);
 	background-repeat: no-repeat;
 	height: 100%;
 	background-size: cover;
@@ -2838,7 +2838,7 @@ Version:	1.0
   20. 404 CSS
 ========================================*/ 
 .error-page{
-	background-image:url('images/hero-bg3.jpg');
+	background-image:url('images/bg_ankatso.jpg');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
