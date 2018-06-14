@@ -10,6 +10,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
 gem 'activeadmin'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
