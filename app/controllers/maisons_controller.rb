@@ -30,7 +30,11 @@ class MaisonsController < InheritedResources::Base
     def create
       @maison = Maison.new(maison_params)
       @maison.agent_id = params[:agent_id]
-      
+      @maison.title = params[:maison][:title]
+      @maison.lieux = params[:maison][:lieux]
+      @maison.duree = params[:maison][:duree]
+      @maison.equipement = params[:maison][:equipement]
+      @maison.prix = params[:maison][:prix].to_i
   
       respond_to do |format|
         if @maison.save
@@ -79,7 +83,6 @@ class MaisonsController < InheritedResources::Base
       # Never trust parameters from the scary internet, only allow the white list through.
       def maison_params
         params.require(:photos).permit(:agent_id, photos_attributes: [:id, :maison_id, :image])
-        params.require(:maison).permit(:title, :prix, :equipement, :lieux, :duree)
       end
     end
 

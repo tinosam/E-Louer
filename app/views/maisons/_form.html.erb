@@ -3,27 +3,27 @@
 <%= form_for( @maison, :html => { :multipart => true }) do |f| %>
 
 
-<%= f.fields_for :maison do |p| %>
+
 <div class="field">
-        <%= p.label :title %><br>
-        <%= p.text_field :title %><br>
+        <%= f.label :title %><br>
+        <%= f.text_field :title %><br>
         
-        <%= p.label :prix %><br>
-        <%= p.select :prix, ['Ar 20000', 'Ar 40000', 'Ar 60000']%><br>
-        <%= p.label :Equipement %><br>
+        <%= f.label :Prix_en_Ar  %><br>
+        <%= f.select :prix, ['20000', '40000', '60000']%><br>
+        <%= f.label :Equipement %><br>
         
-        <%= p.select :equipement, ['Equipement de base', 'Wi-fi', 'Télévision']%><br>
-        <%= p.label :lieux %><br>
+        <%= f.select :equipement, ['Equipement de base', 'Wi-fi', 'Télévision']%><br>
+        <%= f.label :lieux %><br>
        
-        <%= p.select :lieux, ['Près arret', 'calme', 'Avec des voisins']%><br>
-        <%= p.label :duree %><br>
+        <%= f.select :lieux, ['Près arret', 'calme', 'Avec des voisins']%><br>
+        <%= f.label :duree %><br>
        
-        <%= p.select :duree, ['Un mois', 'Deux mois', 'Trois mois']%><br>
+        <%= f.select :duree, ['Un mois', 'Deux mois', 'Trois mois']%><br>
            
- <%= p.label :image %><br>
- <%= p.file_field :image, :multiple => true, name:     "photos[image][]" %>
+ <%= f.label :image %><br>
+ <%= f.file_field :image, :multiple => true, name:     "photos[image][]" %>
 </div>
-<% end %>
+
 
 <input type="hidden" name="agent_id" value="<%= current_agent.id %>">
 <div class="actions">

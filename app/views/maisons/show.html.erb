@@ -187,15 +187,19 @@
 							<div class="gallery-slider">
                                 
 								<div class="single-slider"><img src="<%= @maison.photos[0].image%>" alt="#"></div>
+								<% if @maison.photos[1] != nil %>
 								<div class="single-slider"><img src="<%= @maison.photos[1].image%>" alt="#"></div>
+								<% end %>
+								<% if @maison.photos[2] != nil %>
 								<div class="single-slider"><img src="<%= @maison.photos[2].image%>" alt="#"></div>
+								<% end %>
 							</div>
 						</div>
 						<!--/ End Trip Gallery -->
 						<div class="trip-content">
 							<div class="trip-head">
-								<h2>Treasure of Europe</h2>
-								<p>From <span class="price">$400.00</span><span> / Night</span></p>
+								<h2><%= @maison.title %></h2>
+								<p>From <span class="price">AR <%= @maison.prix %>.00</span><span> / Mounth</span></p>
 							</div>
 							<p>We harvest fresh ideas and deliver uncom intelligent design. We collaborate with atr forward thinking  ats clients. Lorem Ipsum passages, and more recently including. Dummy text of the printing and type setting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make</p>
 						</div>
