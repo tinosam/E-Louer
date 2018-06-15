@@ -154,20 +154,8 @@
 
 									</li>
 									<li>
-										<a href="index.html#">Trip package
-											<i class="fa fa-angle-down"></i>
-										</a>
-										<ul class="dropdown">
-											<li>
-												<a href="trip-3-column.html">Trip Package 3 Column</a>
-											</li>
-											<li>
-												<a href="trip-4-column.html">Trip Package 4 Column</a>
-											</li>
-											<li>
-												<a href="trip-single.html">Trip Single</a>
-											</li>
-										</ul>
+										<a href="/home/logement">Logement</a>
+										
 									</li>
 									<li>
 										<a href="index.html#">Services
@@ -212,12 +200,22 @@
 											<i class="fa fa-angle-down"></i>
 										</a>
 										<ul class="dropdown">
+												<% if user_signed_in? %>
+												<li>
+														<%= link_to "Se déconnecter", destroy_user_session_path, class: "dropdown-item", method: :delete %>
+												</li>
+												<% elsif agent_signed_in? %>
+												<li>
+														<%= link_to "Se déconnecter", destroy_agent_session_path, class: "dropdown-item", method: :delete %>
+												</li>
+												<% else %>
 											<li>
 												<a href="/users/sign_in">Etudiant</a>
 											</li>
 											<li>
 												<a href="/agents/sign_in">Agents</a>
 											</li>
+											<% end %>
 
 										</ul>
 									</li>
@@ -693,33 +691,33 @@
 						<!-- Single Clients -->
 						<div class="single-clients">
 							<a href="index.html#" target="_blank">
-								<img src="images/part/logo-thp.png" alt="#">
+								<img src="/images/part/logo-thp.png" alt="#">
 							</a>
 						</div>
 						<!--/ End Single Clients -->
 						<!-- Single Clients -->
 						<div class="single-clients active">
 							<a href="index.html#" target="_blank">
-								<img src="images/part/P4h.png" alt="#">
+								<img src="/images/part/P4h.png" alt="#">
 							</a>
 						</div>
 						<!--/ End Single Clients -->
 						<!-- Single Clients -->
 						<div class="single-clients">
 							<a href="index.html#" target="_blank">
-								<img src="images/part/sayna.png" alt="#">
+								<img src="/images/part/sayna.png" alt="#">
 							</a>
 						</div>
 						<!--/ End Single Clients -->
 						<!-- Single Clients -->
 						<div class="single-clients">
 							<a href="index.html#" target="_blank">
-								<img src="images/part/e-anatra.png" alt="#">
+								<img src="/images/part/e-anatra.png" alt="#">
 							</a>
 						</div>
 						<div class="single-clients">
 							<a href="index.html#" target="_blank">
-								<img src="images/part/evpromote.png" alt="#">
+								<img src="/images/part/evpromote.png" alt="#">
 							</a>
 						</div>
 						<!--/ End Single Clients -->
