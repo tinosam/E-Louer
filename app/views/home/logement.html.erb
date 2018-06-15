@@ -187,6 +187,7 @@
                                             <a href="/maisons">Dashboard Agent</a>
                                         </li>
                                         <% end %>
+                                       
                                 </ul>
                             </nav>
                         </div>
@@ -216,6 +217,34 @@
                        
                     </ul>
                     <h2>Les logements disponiles</h2>
+
+                    <div class="bottom">
+                            <form class="form">
+                                <!-- Form Destination -->
+                                
+                                <!--/ End Form Destination -->
+                                <!-- Form Activities -->
+                               
+                                <!--/ End Form Activities -->
+                                <!-- Form Duration -->
+                               
+                                <!--/ End Form Duration -->
+                                <!-- Form Budget -->
+                                <div class="form-group">
+                                    <div class="form-control wide">
+                                        
+                                            <input type="text" placeholder="Rechercher" id="myInput" onkeyup="myFunction()">   
+                                    </div>
+                                </div>
+                                <!--/ End Form Budget -->
+                                <!-- Form Button -->
+                                <div class="form-group button">
+                                    <button type="submit" class="btn">Rechercher</button>
+                                </div>
+                                <!--/ End Form Button -->
+                            </form>
+                        </div>
+                        <!--/ End Search Form -->
                 </div>
             </div>
         </div>
@@ -233,7 +262,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+
+            <div class="row" id="myUL">
                 <div class="col-lg-3 col-md-6 col-12">
                     <!-- Single Package -->
                     <div class="single-package">
@@ -243,7 +273,7 @@
                         <div class="trip-details">
                             <div class="left">
                                 <h4>
-                                    <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html">Tour package in Greenville, Carolina</a>
+                                    <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html">Mahamasina, Tananarive</a>
                                 </h4>
                                 <p>
                                     <i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
@@ -626,6 +656,24 @@
     <!--/ End footer -->
 
     <!-- Jquery -->
+    <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("div");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("href")[0];
+                    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+            
+                    }
+                }
+            }
+            </script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery-migrate-3.0.0.js"></script>
     <script src="/js/jquery-ui.min.js"></script>
