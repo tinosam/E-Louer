@@ -5,6 +5,21 @@
 
 <%= f.fields_for :maison do |p| %>
 <div class="field">
+        <%= p.label :title %><br>
+        <%= p.text_field :title %><br>
+        
+        <%= p.label :prix %><br>
+        <%= p.select :prix, ['Ar 20000', 'Ar 40000', 'Ar 60000']%><br>
+        <%= p.label :Equipement %><br>
+        
+        <%= p.select :equipement, ['Equipement de base', 'Wi-fi', 'Télévision']%><br>
+        <%= p.label :lieux %><br>
+       
+        <%= p.select :lieux, ['Près arret', 'calme', 'Avec des voisins']%><br>
+        <%= p.label :duree %><br>
+       
+        <%= p.select :duree, ['Un mois', 'Deux mois', 'Trois mois']%><br>
+           
  <%= p.label :image %><br>
  <%= p.file_field :image, :multiple => true, name:     "photos[image][]" %>
 </div>
