@@ -157,44 +157,8 @@
 										<a href="/home/logement">Logement</a>
 										
 									</li>
-									<li>
-										<a href="index.html#">Services
-											<i class="fa fa-angle-down"></i>
-										</a>
-										<ul class="dropdown">
-											<li>
-												<a href="services.html">Services</a>
-											</li>
-											<li>
-												<a href="service-single.html">Service Single</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="index.html#">Pages
-											<i class="fa fa-angle-down"></i>
-										</a>
-										<ul class="dropdown">
-											<li>
-												<a href="about.html">About Us</a>
-											</li>
-											<li>
-												<a href="destinations.html">Destinations</a>
-											</li>
-											<li>
-												<a href="team.html">Team</a>
-											</li>
-											<li>
-												<a href="testimonials.html">Testimonials</a>
-											</li>
-											<li>
-												<a href="faq.html">Faq</a>
-											</li>
-											<li>
-												<a href="404.html">404 Page</a>
-											</li>
-										</ul>
-									</li>
+									
+									
 									<li>
 										<a href="#">Connexion
 											<i class="fa fa-angle-down"></i>
@@ -222,6 +186,11 @@
 									<li>
 										<a href="/home/contact">Contact</a>
 									</li>
+									<% if agent_signed_in? %>
+									<li>
+											<a href="/maisons">Dashboard Agent</a>
+									</li>
+									<% end %>
 								</ul>
 							</nav>
 						</div>
@@ -325,7 +294,6 @@
 				<div class="col-lg-6 col-12">
 					<!-- About Left -->
 					<div class="about-left">
-						}
 						<img src="images/fille.jpg" alt="#">
 					</div>
 					<!--/ End About Left -->

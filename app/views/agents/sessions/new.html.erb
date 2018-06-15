@@ -138,99 +138,67 @@
     </div>
     <!-- End Middle Header -->
     <!-- Header Bottom -->
-    <div class="header-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <!-- Main Menu -->
-            <div class="main-menu">
-              <nav class="navigation">
-                <ul class="nav menu">
-                  <li>
-                    <a href="/">Home</a>
-
-                  </li>
-                  <li>
-                    <a href="index.html#">Trip package
-                      <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="trip-3-column.html">Trip Package 3 Column</a>
-                      </li>
-                      <li>
-                        <a href="trip-4-column.html">Trip Package 4 Column</a>
-                      </li>
-                      <li>
-                        <a href="trip-single.html">Trip Single</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="index.html#">Services
-                      <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="services.html">Services</a>
-                      </li>
-                      <li>
-                        <a href="service-single.html">Service Single</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="index.html#">Pages
-                      <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="about.html">About Us</a>
-                      </li>
-                      <li>
-                        <a href="destinations.html">Destinations</a>
-                      </li>
-                      <li>
-                        <a href="team.html">Team</a>
-                      </li>
-                      <li>
-                        <a href="testimonials.html">Testimonials</a>
-                      </li>
-                      <li>
-                        <a href="faq.html">Faq</a>
-                      </li>
-                      <li>
-                        <a href="404.html">404 Page</a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="active">
-                    <a href="#">Connexion
-                      <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="/users/sign_in">Etudiant</a>
-                      </li>
-                      <li>
-                        <a href="/agents/sign_in">Agents</a>
-                      </li>
-
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="/home/contact">Contact</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <!--/ End Main Menu -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--/ End Header Bottom -->
+		<div class="header-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<!-- Main Menu -->
+							<div class="main-menu">
+								<nav class="navigation">
+									<ul class="nav menu">
+										<li >
+											<a href="/">Home</a>
+	
+										</li>
+										<li>
+											<a href="/home/logement">Logement</a>
+											
+										</li>
+										
+										
+										<li class="active">
+											<a href="#">Connexion
+												<i class="fa fa-angle-down"></i>
+											</a>
+											<ul class="dropdown">
+													<% if user_signed_in? %>
+													<li>
+															<%= link_to "Se déconnecter", destroy_user_session_path, class: "dropdown-item", method: :delete %>
+													</li>
+													<% elsif agent_signed_in? %>
+													<li>
+															<%= link_to "Se déconnecter", destroy_agent_session_path, class: "dropdown-item", method: :delete %>
+													</li>
+													<% else %>
+												<li>
+													<a href="/users/sign_in">Etudiant</a>
+												</li>
+												<li>
+													<a href="/agents/sign_in">Agents</a>
+												</li>
+												<% end %>
+	
+											</ul>
+										</li>
+										<li>
+											<a href="/home/contact">Contact</a>
+										</li>
+										<% if agent_signed_in? %>
+										<li>
+												<a href="/maisons">Dashboard Agent</a>
+										</li>
+										<% end %>
+									</ul>
+								</nav>
+							</div>
+							<!--/ End Main Menu -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Bottom -->
+		</header>
+		<!--/ End Header Bottom -->
   </header>
 
 

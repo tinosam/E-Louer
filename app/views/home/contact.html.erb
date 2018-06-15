@@ -75,50 +75,50 @@
 		<!--/ End Topbar -->
 		<!-- Middle Header -->
 		<div class="middle-header">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-12">
-						<!-- Logo -->
-						<div class="logo">
-							<a href="index.html"><img src="/images/logo-elouer.png" alt="logo"></a>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-12">
+							<!-- Logo -->
+							<div class="logo">
+								<a href="/"><img src="/images/logo-elouer.png" alt="logo"></a>
+							</div>
+							<!--/ End Logo -->
+							<div class="mobile-nav"></div>
 						</div>
-						<!--/ End Logo -->
-						<div class="mobile-nav"></div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-12">
-						<!-- Header Widget -->
-						<div class="header-widget">
-							<!-- Single Widget -->
-							<div class="single-widget">
-								<img src="/images/location-icon.png" alt="#">
-								<h4>76 Bonnet Ivandry
-									</h4>
-								<p>Antananarivo Madagascar</p>
+						<div class="col-lg-9 col-md-9 col-12">
+							<!-- Header Widget -->
+							<div class="header-widget">
+								<!-- Single Widget -->
+								<div class="single-widget">
+									<img src="/images/location-icon.png" alt="#">
+									<h4>76 Bonnet Ivandry
+										</h4>
+									<p>Antananarivo Madagascar</p>
+								</div>
+								<!--/ End Single Widget -->
+								<!-- Single Widget -->
+								<div class="single-widget">
+									<img src="/images/call-icon.png" alt="#">
+									<h4>+26134 49 295 99</h4>
+									<p>Madagascar</p>
+								</div>
+								<!--/ End Single Widget -->
+								<!-- Single Widget -->
+								<div class="single-widget">
+									<img src="/images/clock-icon.png" alt="#">
+									<h4>Vend -Fri: 9:00-19:00</h4>
+									<p>Juin 2018</p>
+								</div>
+								<!--/ End Single Widget -->
 							</div>
-							<!--/ End Single Widget -->
-							<!-- Single Widget -->
-							<div class="single-widget">
-								<img src="/images/call-icon.png" alt="#">
-								<h4>+26134 49 295 99</h4>
-								<p>Madagascar</p>
-							</div>
-							<!--/ End Single Widget -->
-							<!-- Single Widget -->
-							<div class="single-widget">
-								<img src="/images/clock-icon.png" alt="#">
-								<h4>Vend -Fri: 9:00-19:00</h4>
-								<p>Juin 2018</p>
-							</div>
-							<!--/ End Single Widget -->
+							<!--/ End Header Widget -->
 						</div>
-						<!--/ End Header Widget -->
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- End Middle Header -->
-		<!-- Header Bottom -->
-		<div class="header-bottom">
+			<!-- End Middle Header -->
+	<!-- Header Bottom -->
+	<div class="header-bottom">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -126,40 +126,47 @@
 						<div class="main-menu">
 							<nav class="navigation">
 								<ul class="nav menu">
-									<li ><a href="/">Home</a>
+									<li>
+										<a href="/">Home</a>
+
+									</li>
+									<li>
+										<a href="/home/logement">Logement</a>
 										
 									</li>
-									<li><a href="index.html#">Trip package<i class="fa fa-angle-down"></i></a>
+									
+									<li>
+										<a href="#">Connexion
+											<i class="fa fa-angle-down"></i>
+										</a>
 										<ul class="dropdown">
-											<li><a href="trip-3-column.html">Trip Package 3 Column</a></li>
-											<li><a href="trip-4-column.html">Trip Package 4 Column</a></li>
-											<li><a href="trip-single.html">Trip Single</a></li>
+												<% if user_signed_in? %>
+												<li>
+														<%= link_to "Se déconnecter", destroy_user_session_path, class: "dropdown-item", method: :delete %>
+												</li>
+												<% elsif agent_signed_in? %>
+												<li>
+														<%= link_to "Se déconnecter", destroy_agent_session_path, class: "dropdown-item", method: :delete %>
+												</li>
+												<% else %>
+											<li>
+												<a href="/users/sign_in">Etudiant</a>
+											</li>
+											<li>
+												<a href="/agents/sign_in">Agents</a>
+											</li>
+											<% end %>
+
 										</ul>
 									</li>
-									<li><a href="index.html#">Services<i class="fa fa-angle-down"></i></a>
-										<ul class="dropdown">
-											<li><a href="services.html">Services</a></li>
-											<li><a href="service-single.html">Service Single</a></li>
-										</ul>
+									<li  class="active">
+										<a href="/home/contact">Contact</a>
 									</li>
-									<li><a href="index.html#">Pages<i class="fa fa-angle-down"></i></a>
-										<ul class="dropdown">
-											<li><a href="about.html">About Us</a></li>
-											<li><a href="destinations.html">Destinations</a></li>
-											<li><a href="team.html">Team</a></li>
-											<li><a href="testimonials.html">Testimonials</a></li>
-											<li><a href="faq.html">Faq</a></li>
-											<li><a href="404.html">404 Page</a></li>
-										</ul>
+									<% if agent_signed_in? %>
+									<li>
+											<a href="/maisons">Dashboard Agent</a>
 									</li>
-									<li><a href="#">Connexion<i class="fa fa-angle-down"></i></a>
-										<ul class="dropdown">
-											<li><a href="/users/sign_in">Etudiant</a></li>
-											<li><a href="/agents/sign_in">Agents</a></li>
-											
-										</ul>
-									</li>
-									<li class="active"><a href="/home/contact">Contact</a></li>
+									<% end %>
 								</ul>
 							</nav>
 						</div>

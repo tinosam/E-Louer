@@ -154,44 +154,7 @@
                                         <a href="/home/logement">Logement</a>
 
                                     </li>
-                                    <li>
-                                        <a href="index.html#">Services
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                        <ul class="dropdown">
-                                            <li>
-                                                <a href="services.html">Services</a>
-                                            </li>
-                                            <li>
-                                                <a href="service-single.html">Service Single</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="index.html#">Pages
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                        <ul class="dropdown">
-                                            <li>
-                                                <a href="about.html">About Us</a>
-                                            </li>
-                                            <li>
-                                                <a href="destinations.html">Destinations</a>
-                                            </li>
-                                            <li>
-                                                <a href="team.html">Team</a>
-                                            </li>
-                                            <li>
-                                                <a href="testimonials.html">Testimonials</a>
-                                            </li>
-                                            <li>
-                                                <a href="faq.html">Faq</a>
-                                            </li>
-                                            <li>
-                                                <a href="404.html">404 Page</a>
-                                            </li>
-                                        </ul>
-                                    </li>
+
                                     <li>
                                         <a href="#">Connexion
                                             <i class="fa fa-angle-down"></i>
@@ -219,6 +182,11 @@
                                     <li>
                                         <a href="/home/contact">Contact</a>
                                     </li>
+                                    <% if agent_signed_in? %>
+                                        <li >
+                                            <a href="/maisons">Dashboard Agent</a>
+                                        </li>
+                                        <% end %>
                                 </ul>
                             </nav>
                         </div>
@@ -228,6 +196,8 @@
             </div>
         </div>
         <!--/ End Header Bottom -->
+    </header>
+    <!--/ End Header Bottom -->
     </header>
     <!--/ End Header Area -->
 
@@ -270,12 +240,12 @@
                     <!-- Single Package -->
                     <div class="single-package">
                         <div class="trip-head">
-                            <img src="/images/package/p-image1.jpg" alt="#">
+                            <img src="/sary/base1t.jpg" alt="#">
                         </div>
                         <div class="trip-details">
                             <div class="left">
                                 <h4>
-                                    <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html">Tour package in Greenville, Carolina</a>
+                                    <a href="#">Tour package in Greenville, Carolina</a>
                                 </h4>
                                 <p>
                                     <i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
@@ -285,7 +255,7 @@
                                     <span>$300</span>
                                 </p>
                             </div>
-                            <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html" class="btn primary">View More</a>
+                            <a href="#" class="btn primary">Plus de Detail</a>
                         </div>
                     </div>
                     <!--/ End Single Package -->
@@ -294,12 +264,12 @@
                     <!-- Single Package -->
                     <div class="single-package">
                         <div class="trip-head">
-                            <img src="/images/package/p-image2.jpg" alt="#">
+                            <img src="/sary/base2t.jpg" alt="#">
                         </div>
                         <div class="trip-details">
                             <div class="left">
                                 <h4>
-                                    <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html">Snorkel Tour in Grand Turks Coral Reef</a>
+                                    <a href="#">Snorkel Tour in Grand Turks Coral Reef</a>
                                 </h4>
                                 <p>
                                     <i class="fa fa-clock-o"></i>4 Nights 5 Days</p>
@@ -309,7 +279,7 @@
                                     <span>$500</span>
                                 </p>
                             </div>
-                            <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html" class="btn primary">View More</a>
+                            <a href="#" class="btn primary">Plus de Detail</a>
                         </div>
                     </div>
                     <!--/ End Single Package -->
@@ -319,12 +289,12 @@
                     <div class="single-package">
                         <div class="trip-head">
                             <div class="trip-offer">30% OFF</div>
-                            <img src="/images/package/p-image3.jpg" alt="#">
+                            <img src="/sary/base3t.jpg" alt="#">
                         </div>
                         <div class="trip-details">
                             <div class="left">
                                 <h4>
-                                    <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html">Awesome tour package in pattaya</a>
+                                    <a href="#">Awesome tour package in pattaya</a>
                                 </h4>
                                 <p>
                                     <i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
@@ -334,7 +304,7 @@
                                     <span>$400</span>
                                 </p>
                             </div>
-                            <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html" class="btn primary">View More</a>
+                            <a href="#" class="btn primary">Plus de Detail</a>
                         </div>
                     </div>
                     <!--/ End Single Package -->
@@ -343,12 +313,12 @@
                     <!-- Single Package -->
                     <div class="single-package">
                         <div class="trip-head">
-                            <img src="/images/package/p-image4.jpg" alt="#">
+                            <img src="/sary/base4t.jpg" alt="#">
                         </div>
                         <div class="trip-details">
                             <div class="left">
                                 <h4>
-                                    <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html">Snorkel Tour in Grand Turks Coral Reef</a>
+                                    <a href="#">Snorkel Tour in Grand Turks Coral Reef</a>
                                 </h4>
                                 <p>
                                     <i class="fa fa-clock-o"></i>2 Nights 1 Days</p>
@@ -358,7 +328,7 @@
                                     <span>$100</span>
                                 </p>
                             </div>
-                            <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html" class="btn primary">View More</a>
+                            <a href="#" class="btn primary">Plus de Detail</a>
                         </div>
                     </div>
                     <!--/ End Single Package -->
@@ -372,7 +342,7 @@
                         <div class="trip-details">
                             <div class="left">
                                 <h4>
-                                    <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html">Tour package in Greenville, Carolina</a>
+                                    <a href="#">Tour package in Greenville, Carolina</a>
                                 </h4>
                                 <p>
                                     <i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
@@ -382,7 +352,7 @@
                                     <span>$400</span>
                                 </p>
                             </div>
-                            <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html" class="btn primary">View More</a>
+                            <a href="#" class="btn primary">Plus de Detail</a>
                         </div>
                     </div>
                     <!--/ End Single Package -->
@@ -396,7 +366,7 @@
                         <div class="trip-details">
                             <div class="left">
                                 <h4>
-                                    <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html">Snorkel Tour in Grand Turks Coral Reef</a>
+                                    <a href="#">Snorkel Tour in Grand Turks Coral Reef</a>
                                 </h4>
                                 <p>
                                     <i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
@@ -406,7 +376,7 @@
                                     <span>$450</span>
                                 </p>
                             </div>
-                            <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html" class="btn primary">View More</a>
+                            <a href="#" class="btn primary">Plus de Detail</a>
                         </div>
                     </div>
                     <!--/ End Single Package -->
@@ -420,7 +390,7 @@
                         <div class="trip-details">
                             <div class="left">
                                 <h4>
-                                    <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html">Awesome tour package in pattaya</a>
+                                    <a href="#">Awesome tour package in pattaya</a>
                                 </h4>
                                 <p>
                                     <i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
@@ -430,7 +400,7 @@
                                     <span>$400</span>
                                 </p>
                             </div>
-                            <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html" class="btn primary">View More</a>
+                            <a href="#" class="btn primary">Plus de Detail</a>
                         </div>
                     </div>
                     <!--/ End Single Package -->
@@ -444,7 +414,7 @@
                         <div class="trip-details">
                             <div class="left">
                                 <h4>
-                                    <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html">Snorkel Tour in Grand Turks Coral Reef</a>
+                                    <a href="#">Snorkel Tour in Grand Turks Coral Reef</a>
                                 </h4>
                                 <p>
                                     <i class="fa fa-clock-o"></i>2 Nights 1 Days</p>
@@ -454,7 +424,7 @@
                                     <span>$100</span>
                                 </p>
                             </div>
-                            <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html" class="btn primary">View More</a>
+                            <a href="#" class="btn primary">Plus de Detail</a>
                         </div>
                     </div>
                     <!--/ End Single Package -->
