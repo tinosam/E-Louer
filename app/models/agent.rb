@@ -3,7 +3,7 @@ class Agent < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-         has_many :tranos
+         has_many :maisons
   has_one :cin
   accepts_nested_attributes_for :cin
 end

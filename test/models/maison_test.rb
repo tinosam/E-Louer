@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TranoTest < ActiveSupport::TestCase
+class MaisonTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
