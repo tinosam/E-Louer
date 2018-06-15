@@ -230,17 +230,21 @@
                                
                                 <!--/ End Form Duration -->
                                 <!-- Form Budget -->
+                               
+
                                 <div class="form-group">
-                                    <div class="form-control wide">
-                                        
-                                            <input type="text" placeholder="Rechercher" id="myInput" onkeyup="myFunction()">   
-                                    </div>
+                                        <div class="form-control wide">
+                                <%= search_form_for(@q) do |f| %>
+                                <%= f.search_field :id_eq, placeholder: "Rechercher" %>
+                                        </div>
                                 </div>
-                                <!--/ End Form Budget -->
-                                <!-- Form Button -->
                                 <div class="form-group button">
-                                    <button type="submit" class="btn">Rechercher</button>
+								<%= f.submit "Rechercher", class: "btn" %>
+                                <% end %>
                                 </div>
+
+                            
+                                
                                 <!--/ End Form Button -->
                             </form>
                         </div>
@@ -263,6 +267,9 @@
                 </div>
             </div>
 
+
+            <% @maisons.each do |maison| %>
+           
             <div class="row" id="myUL">
                 <div class="col-lg-3 col-md-6 col-12">
                     <!-- Single Package -->
@@ -460,6 +467,7 @@
             </div>
         </div>
     </section>
+    <% end %>
     <!--/ End Tour Package -->
 
     <!-- Clients -->

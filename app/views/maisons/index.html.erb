@@ -182,7 +182,7 @@
 
 										</ul>
 									</li>
-									<li >
+									<li>
 										<a href="/home/contact">Contact</a>
 									</li>
 									<% if agent_signed_in? %>
@@ -208,13 +208,22 @@
 		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 		<!------ Include the above in your HEAD tag ---------->
 
-		
 
-		<%= search_form_for(@q) do |f| %>
-			<%= f.search_field :id_lteq, placeholder: "Rechercher" %>
-				
-			<%= f.submit class: "btn" %>
-		<% end %>
+		<section id="contact-us" class="contact-us section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 offset-lg-2 col-12">
+							<div class="form-group">
+								<h2 class="title">Effectuez votre recherche ici :</h2>
+						<%= search_form_for(@q) do |f| %>
+							<%= f.search_field :id_eq, placeholder: "Rechercher" %>
+
+								<%= f.submit "Rechercher", class: "btn primary" %>
+						<% end %>
+							</div>
+					</div>
+				</div>
+		</section>
 
 
 
