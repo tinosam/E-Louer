@@ -130,7 +130,7 @@ Version:	1.0
 }
 /* Main Menu */
 .site-header .main-menu {
-	background: #FF7550;
+	background: #FF6600;
 	padding: 20px;
 	z-index: 99;
 	text-align: center;
@@ -417,7 +417,7 @@ Version:	1.0
 }
 /* Header Sticky */
 .site-header.sticky .header-bottom{
-	background:#FF7550;
+	background:#FF6600;
 	position:fixed;
 	z-index:999;
 	top:0;
