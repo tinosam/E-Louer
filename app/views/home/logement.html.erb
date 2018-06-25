@@ -351,7 +351,7 @@
                     <!-- Single Package -->
                     <div class="single-package">
                         <div class="trip-head">
-                            <img src="<%= maison.photos[0].image_url(:thumb).to_s %>" alt="#">
+                            <img src="<%= maison.photos[2].image_url(:thumb).to_s %>" alt="#">
                         </div>
                         <div class="trip-details">
                             <div class="left">
@@ -366,7 +366,7 @@
                                     <span><%= maison.prix %></span>
                                 </p>
                             </div>
-                            <a href="/maisons/" class="btn primary">Plus de détail</a>
+                            <a href="<%= maison_path(maison.id) %>" class="btn primary">Plus de détail</a>
                         </div>
                     </div>
                     <!--/ End Single Package -->
