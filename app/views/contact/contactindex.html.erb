@@ -188,76 +188,53 @@
 						<li><a href="index.html">Home</a></li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
-					<h2>Qui Somme Nous?</h2>
+					<h2>Envoyez nous votre email</h2>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!--/ End Breadcrumb -->
+</br>
   
-	<!-- Start Contact -->
-	<section id="contact-us" class="contact-us section"  >
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="title-line center">
-					    <p>Pour plus d'information</p>
-						<%= link_to "Contactez Nous", contact_contactindex_path, class: "btn primary" %>
-					</div>
-				</div>
-			</div>
-			<div class="row">
 
-				<!-- about -->
-                  <div class="content1" >
-                    <%= image_tag "nao.jpg", class: "about1" %>
-                    <%= image_tag "tino.jpg", class: "about1" %>
-                   <%= image_tag "njara.jpg", class: "about1" %>
-                   <%= image_tag "cedric.jpg", class: "about1" %>
-                  </div>
 
-				<!-- /end about -->
-
-				<div class="col-lg-12">
-					<div class="contact">
+				<!-- Contact Form -->
+				<div id="sho" >
+				<div class="col-lg-8 offset-lg-2 col-12" >
+					<form class="form" method="post" action="http://www.iamshakil.me/themes/traveltrek/mail/mail.php">
 						<div class="row">
-							<div class="col-lg-4 col-md-4 col-12">
-								<!-- Single Contact -->
-								<div class="single-contact">
-									<img src="/images/location-icon.png" alt="#">
-									<h4>Notre location</h4>
-									<p>76 Bonnet Ivandry, Antananarivo, Madagascar</p>
+							<div class="col-lg-6 col-md-6 col-12">
+								<div class="form-group">
+									<input type="text" name="name" placeholder="Name" required="required">
 								</div>
-								<!--/ End Single Contact -->
 							</div>
-							<div class="col-lg-4 col-md-4 col-12">
-								<!-- Single Contact -->
-								<div class="single-contact">
-									<img src="/images/call-icon.png" alt="#">
-									<h4>Numero</h4>
-									<p>Telephone: +26134 49 295 99</p>
-									<p><a href="mailto:yvestinos@gmail.com">Email: sayna.io</a></p>
+							<div class="col-lg-6 col-md-6 col-12">
+								<div class="form-group">
+									<input type="email" name="email" placeholder="Email" required="required">
 								</div>
-								<!--/ End Single Contact -->
 							</div>
-							<div class="col-lg-4 col-md-4 col-12">
-								<!-- Single Contact -->
-								<div class="single-contact">
-									<img src="/images/clock-icon.png" alt="#">
-									<h4>Working Times</h4>
-									<p>Lundi - Vendredi: 9:00AM -19:00PM <span>Dimanche Close</span></p>
+							<div class="col-12">
+								<div class="form-group">
+									<input type="text" name="subject" placeholder="Subject" required="required">
 								</div>
-								<!--/ End Single Contact -->
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<textarea name="message" rows="8" placeholder="Your Message" ></textarea>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group button">	
+									<button type="submit" class="btn primary">Envoyer Messages</button>
+								</div>
 							</div>
 						</div>
-					</div>
+					</form>
 				</div>
-			</div>
-		</div>
-	</section>
-	<!--/ End Contact -->
-	
-	<!-- Clients -->
+			    </div>
+				<!--/ End Contact Form -->
+</br>
+<!-- Clients -->
 	<div id="clients" class="clients section">
 			<div class="container">
 				<div class="row">
@@ -326,7 +303,7 @@
 							</li>
 							
 							<li>
-								<a href="/home/contact">Contact</a>
+								<a href="/home/contact">message</a>
 							</li>
 						</ul>
 					</div>

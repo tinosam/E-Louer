@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+ .about1{
+ 	height: 200px;
+ 	width: 200px ;
+ 	border-radius: 100px;
+ 	box-shadow: 0px 2px 11px 2px grey;
+ }
+ .content1{
+
+ 	margin-left: 15%;
+    padding-top: 5%;
+   
+ 	
+ }
+ .about1:hover{
+ 	opacity: 0.7;
+
+ }
+ #sho{
+ 	width: auto;
+ 	margin-top: 60px;
+ 	margin-bottom:60px;
+ }
