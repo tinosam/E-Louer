@@ -214,11 +214,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 offset-lg-2 col-12">
+						
 						<div class="form-group">
-							<h2 class="title">Effectuez votre recherche ici :</h2>
+							<h2 class="title-line center">Effectuez votre recherche ici :</h2>
 							<%= search_form_for(@q) do |f| %>
 							<%= f.search_field :id_eq, placeholder: "Rechercher" %>
-
+<br>
+<br>
 							<%= f.submit "Rechercher", class: "btn primary" %>
 							<% end %>
 						</div>
