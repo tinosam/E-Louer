@@ -183,36 +183,35 @@
 				<div class="col-lg-8 col-12">
 					<div class="trip-details">
 						<!-- Trip Gallery -->
-						<div class="trip-gallery">
-							<div class="gallery-slider">
+						<!-- <div class="trip-gallery">
+							<div class="gallery-slider"> -->
                                 
 								<div class="single-slider"><img src="<%= @maison.photos[0].image%>" alt="#"></div>
-								<% if @maison.photos[1] != nil %>
+								<!-- <% if @maison.photos[1] != nil %>
 								<div class="single-slider"><img src="<%= @maison.photos[1].image%>" alt="#"></div>
 								<% end %>
 								<% if @maison.photos[2] != nil %>
-								<div class="single-slider"><img src="<%= @maison.photos[2].image%>" alt="#"></div>
+								<div class="single-slider"><img src="<%= @maison.photos[2].image%>" alt="#"></div> -->
 								<% end %>
-							</div>
-						</div>
+							<!-- </div>
+						</div> -->
 						<!--/ End Trip Gallery -->
 						<div class="trip-content">
 							<div class="trip-head">
 								<h2><%= @maison.title %></h2>
-								<p>From <span class="price">AR <%= @maison.prix %>.00</span><span> / Mounth</span></p>
+								<p><span class="price">AR <%= @maison.prix %>.00</span><span> / Mois</span></p>
 							</div>
-                            <p>Les détails seront placé ici.</p>
-                            <p>Les détails seront placé ici.</p>
-                            <p>Les détails seront placé ici.</p>
+                            <p>Les détails seront placé ici prochainement.</p>
+                           
 						</div>
 						<div class="trip-tab">
 							<div class="trip-tab-inner">
 								<!-- Tab Nav -->                                                                                                   
 								<ul class="nav nav-tabs" id="myTab" role="tablist">
-									<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#t-tab8" role="tab">TRIP OVERVIEW</a></li>
-									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab9" role="tab">Itinearary</a></li>
-									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab10" role="tab">Pricing Plan</a></li>
-									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab11" role="tab">Booking</a></li>
+									<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#t-tab8" role="tab">Accessibilité</a></li>
+									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab9" role="tab">Emplacement</a></li>
+									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab10" role="tab">Commentaire</a></li>
+									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab11" role="tab">Lieux précis</a></li>
 								</ul>
 								<!--/ End Tab Nav -->                              
 								<div class="tab-content" id="myTabContent">
@@ -251,7 +250,7 @@
 					<div class="sidebar-main">
 						<!-- Booking Form -->
 						<div class="single-widget booking">
-							<h2>Trip Booking</h2>
+							<h2>Action à faire</h2>
 							<form class="form">
 								<div class="form-group date">
 									<h4>Arrival Date</h4>
@@ -290,102 +289,76 @@
 											</div>
 										</div>
 									</div>
-								</div>
+                                </div>
+                                <% if user_signed_in? %>
+                              
 								<div class="form-group button">
-									<button type="submit" class="btn">Book a Trip</button>
-								</div>
+                                    <!-- <button type="submit" class="btn">Reservé</button> -->
+                                    <a href="/" class="btn">Reservez</a>
+                                </div>
+                                <% elsif agent_signed_in? %>
+                                <div class="form-group button">
+                                    <!-- <button type="submit" class="btn">Reservé</button> -->
+                                    <a href="/" class="btn">Contactez Agents</a>
+                                </div>
+
+                                <% else %>
+
+                                <div class="form-group button">
+                                    <a href="/users/sign_in" class="btn">Inscrivez-vous</a>
+                                    
+                                </div>
+
+                                <% end %>
+
 							</form>
 						</div>
 						<!-- End Booking Form -->
-						<!-- Trip list -->
+                        <!-- Trip list -->
+                     
 						<div class="single-widget trip-details">
-							<h2>Trip Detailes</h2>
+							<h2>Autre détail</h2>
 							<div class="trip-list">
 								<!-- single list -->
 								<div class="single-list">
-									<div class="left">Categories:</div>
-									<div class="right">Europe Tour</div>
+									<div class="left">Réference :</div>
+									<div class="right"><%= @maison.title %></div>
 								</div>
 								<!--/ End single list -->
 								<!-- single list -->
 								<div class="single-list">
-									<div class="left">Duration:</div>
-									<div class="right">7 Nights 8 Days</div>
+									<div class="left">Disponibilité:</div>
+									<div class="right"><%= @maison.duree %></div>
 								</div>
 								<!--/ End single list -->
 								<!-- single list -->
 								<div class="single-list">
-									<div class="left">Price:</div>
-									<div class="right">$355.00</div>
+									<div class="left">Prix:</div>
+									<div class="right"><%= @maison.prix %></div>
 								</div>
 								<!--/ End single list -->
 								<!-- single list -->
 								<div class="single-list">
-									<div class="left">Difficulty:</div>
-									<div class="right">Moderate</div>
+									<div class="left">Equipement:</div>
+									<div class="right"><%= @maison.equipement %></div>
 								</div>
 								<!--/ End single list -->
 								<!-- single list -->
 								<div class="single-list">
-									<div class="left">Departure:</div>
-									<div class="right">Feb 17 March 06 March 14</div>
+									<div class="left">Lieux :</div>
+									<div class="right"><%= @maison.lieux %></div>
 								</div>
 								<!--/ End single list -->
 								<!-- single list -->
-								<div class="single-list">
-									<div class="left">HOTEL:</div>
-									<div class="right">Europe Tour</div>
-								</div>
+								
 								<!--/ End single list -->
-							</div>
+                            </div>
+                             
 						</div>
 						<!--/ End Trip list -->
-						<!-- Trip Categories -->
-						<div class="single-widget categories">
-							<h2>Categories</h2>
-							<ul>
-								<li><a href="#">Estern Europe Tour<span>(6)</span></a></li>
-								<li><a href="#">Australian Tour<span>(3)</span></a></li>
-								<li><a href="#">Treasure of Europe<span>(7)</span></a></li>
-								<li><a href="#">Classic Thailand Tour<span>(8)</span></a></li>
-								<li><a href="#">Triangle of Europe<span>(3)</span></a></li>
-								<li><a href="#">Maldives Beach<span>(2)</span></a></li>
-							</ul>
-						</div>
-						<!--/ End Trip Categories -->
+						
 						<!-- Other Trips -->
-						<div class="single-widget other-trips">
-							<h2>Other Trips</h2>
-							<div class="trips">
-								<!-- Single Trip -->
-								<div class="signle-trip">
-									<img src="/images/trip-img1.jpg" alt="#">
-									<div class="text">
-										<h4><a href="#">Estern Europe Tour</a></h4>
-										<p>Lorem ipsum dolor sit amet, consectetur </p>
-									</div>
-								</div>
-								<!--/ End Single Trip -->
-								<!-- Single Trip -->
-								<div class="signle-trip">
-									<img src="/images/trip-img2.jpg" alt="#">
-									<div class="text">
-										<h4><a href="#">Estern Europe Tour</a></h4>
-										<p>Lorem ipsum dolor sit amet, consectetur </p>
-									</div>
-								</div>
-								<!--/ End Single Trip -->
-								<!-- Single Trip -->
-								<div class="signle-trip">
-									<img src="/images/trip-img3.jpg" alt="#">
-									<div class="text">
-										<h4><a href="#">Estern Europe Tour</a></h4>
-										<p>Lorem ipsum dolor sit amet, consectetur </p>
-									</div>
-								</div>
-								<!--/ End Single Trip -->
-							</div>
-						</div>
+						
 						<!--/ End Other Trips -->
 					</div>
 					<!--/ End Trip Sidebar -->

@@ -206,7 +206,7 @@
 	<!-- Hero Area -->
 	<section id="hero-area" class="hero-area style3">
 			<!-- Background Youtube Player -->
-			<a class="player" data-property="{videoURL:'https://#www.youtube.com/watch?v=i7MDJ-7yGLI',containment:'#hero-area', showControls:false,  zoom:0, loop:true, mute:false, startAt:0, opacity:1, quality:'default'}"></a>
+			<a class="player" data-property="{videoURL:'',containment:'#hero-area', showControls:false,  zoom:0, loop:true, mute:false, startAt:0, opacity:1, quality:'default'}"></a>
 			<!-- End Background Youtube Player -->
 			<div class="hero-single overlay">
 				<div class="container">
@@ -321,25 +321,26 @@
 					<div class="trips-main">
 						<!-- Trips Slider -->
 						<div class="trips-slider">
+								<% @maisons.each do |maison| %>
 							<!-- Single Slider -->
 							<div class="single-slider">
 								<div class="trip-head">
-									<img src="/images/p-package/logement1.jpg" alt="#">
+									<img src="<%= maison.photos[0].image_url(:thumb).to_s %>" alt="#">
 								</div>
 								<div class="trip-details">
 									<div class="left">
 										<h4>
-											<a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a>
+											<a href="/home/logement"><%= maison.title %></a>
 										</h4>
 										<p>
-											<i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
+											<i class="fa fa-clock-o"></i><%= maison.duree %></p>
 									</div>
 									<div class="right">
-										<p>From
-											<span>$300</span>
+										<p>Pour
+											<span>Ar<%= maison.prix %></span>
 										</p>
 									</div>
-									<a href="trip-single.html" class="btn">Plus de détail</a>
+									<a href="<%= maison_path(maison.id) %>" class="btn">Plus de détail</a>
 								</div>
 							</div>
 							<!--/ End Single Trips -->
@@ -352,17 +353,17 @@
 								<div class="trip-details">
 									<div class="left">
 										<h4>
-											<a href="trip-single.html">Awesome tour package in pattaya</a>
+											<a href="/home/logement">Awesome tour package in pattaya</a>
 										</h4>
 										<p>
 											<i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
 									</div>
 									<div class="right">
-										<p>From
-											<span>$200</span>
+										<p>Pour
+											<span>Ar20000</span>
 										</p>
 									</div>
-									<a href="trip-single.html" class="btn">Plus de détail</a>
+									<a href="/home/logement" class="btn">Plus de détail</a>
 								</div>
 							</div>
 							<!--/ End Single Trips -->
@@ -374,22 +375,22 @@
 								<div class="trip-details">
 									<div class="left">
 										<h4>
-											<a href="trip-single.html">Tour package in Greenville, Carolina</a>
+											<a href="/home/logement">Tour package in Greenville, Carolina</a>
 										</h4>
 										<p>
 											<i class="fa fa-clock-o"></i>5 Nights 6 Days</p>
 									</div>
 									<div class="right">
-										<p>From
-											<span>$800</span>
+										<p>Pour
+											<span>Ar80000</span>
 										</p>
 									</div>
-									<a href="trip-single.html" class="btn">Plus de détail</a>
+									<a href="/home/logement" class="btn">Plus de détail</a>
 								</div>
 							</div>
 							<!--/ End Single Trips -->
 							
-							<!-- Single Slider -->
+							<!-- Single Slider --> <% end %>  
 
 							<!--/ End Single Trips -->
 						</div>
@@ -416,7 +417,7 @@
 								<span>Des Etudiants est notre objectif.</span>
 							</h2>
 						</div>
-						<a href="trip-3-column.html" class="btn">Plus de logement ...</a>
+						<a href="/home/logement" class="btn">Plus de logement ...</a>
 					</div>
 				</div>
 			</div>

@@ -260,11 +260,11 @@
                                     <i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
                             </div>
                             <div class="right">
-                                <p>From
+                                <p>Pour
                                     <span>$300</span>
                                 </p>
                             </div>
-                            <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html" class="btn primary">Plus de détail</a>
+                            <a href="#" class="btn primary">Plus de détail</a>
                         </div>
                     </div>
                     <!--/ End Single Package -->
@@ -284,11 +284,11 @@
                                     <i class="fa fa-clock-o"></i>4 Nights 5 Days</p>
                             </div>
                             <div class="right">
-                                <p>From
-                                    <span>$500</span>
+                                <p>Pour
+                                    <span>Ar50000</span>
                                 </p>
                             </div>
-                            <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html" class="btn primary">Plus de détail</a>
+                            <a href="#" class="btn primary">Plus de détail</a>
                         </div>
                     </div>
                     <!--/ End Single Package -->
@@ -309,11 +309,11 @@
                                     <i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
                             </div>
                             <div class="right">
-                                <p>From
-                                    <span>$400</span>
+                                <p>Pour
+                                    <span>Ar40000</span>
                                 </p>
                             </div>
-                            <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html" class="btn primary">Plus de détail</a>
+                            <a href="#" class="btn primary">Plus de détail</a>
                         </div>
                     </div>
                     <!--/ End Single Package -->
@@ -333,11 +333,11 @@
                                     <i class="fa fa-clock-o"></i>2 Nights 1 Days</p>
                             </div>
                             <div class="right">
-                                <p>From
-                                    <span>$100</span>
+                                <p>Pour
+                                    <span>Ar10000</span>
                                 </p>
                             </div>
-                            <a href="http://www.iamshakil.me/themes/traveltrek/package-single.html" class="btn primary">Plus de détail</a>
+                            <a href="#" class="btn primary">Plus de détail</a>
                         </div>
                     </div>
                     <!--/ End Single Package -->
@@ -351,19 +351,19 @@
                     <!-- Single Package -->
                     <div class="single-package">
                         <div class="trip-head">
-                            <img src="<%= maison.photos[2].image_url(:thumb).to_s %>" alt="#">
+                            <img src="<%= maison.photos[0].image_url(:thumb).to_s %>" alt="#">
                         </div>
                         <div class="trip-details">
                             <div class="left">
                                 <h4>
-                                    <a href="#"><%= maison.title %></a>
+                                    <a href="<%= maison_path(maison.id) %>"><%= maison.title %></a>
                                 </h4>
                                 <p>
                                     <i class="fa fa-clock-o"></i><%= maison.duree %></p>
                             </div>
                             <div class="right">
-                                <p>Prix de location
-                                    <span><%= maison.prix %></span>
+                                <p>Prix Location
+                                    <span>Ar<%= maison.prix %></span>
                                 </p>
                             </div>
                             <a href="<%= maison_path(maison.id) %>" class="btn primary">Plus de détail</a>
